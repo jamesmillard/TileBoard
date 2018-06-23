@@ -437,4 +437,8 @@
          </div>
       </div>
    </div>
+   <div ng-repeat="tile in custom_tiles track by $index" ng-include="tile.html">
+           <div ng-include="tile.html"/>
+   </div>
+   
 </div>

@@ -1,0 +1,37 @@
+<!--  main.css has CSS specific to tile types, particular where there is a click action.  Use the following if your tile is clickable.
+Could consider a mechanism to allow a fix style to be included.
+ -->
+<style>
+.item.-example {
+  cursor: pointer;
+}
+.item.-example:nonhover {
+  margin-top: -2px;
+  margin-left: -2px;
+  border: 2px solid rgba(200, 200, 200, 0.6);
+}
+
+.item.-example:active {
+  margin-top: -2px;
+  margin-left: -2px;
+  border: 2px solid rgba(200, 200, 200, 0.9);
+}
+
+.item.-example .item-clickable {
+  left: 5px;
+  top: 5px;
+  height: 6px;
+  width: 6px;
+  border-left: 2px solid rgba(255, 255, 255, 0.8);
+  border-top: 2px solid rgba(255, 255, 255, 0.8);
+  opacity: 0.5;
+  position: absolute;
+  z-index: 2;
+}
+</style>
+
+<div ng-if="item.type === EXAMPLE" class="item-entity-container">
+        <div class="item-entity"> <div class="item-entity--icon mdi mdi-touch-app">
+         </div>
+</div>
+

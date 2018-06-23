@@ -4,6 +4,9 @@ function MainController ($scope) {
    $scope.pages = CONFIG.pages;
    $scope.TYPES = TYPES;
    $scope.FEATURES = FEATURES;
+   
+   
+   $scope.custom_tiles = CONFIG.custom_tiles;
 
    $scope.activeSelect = null;
    $scope.ready = false; // ready state
@@ -23,6 +26,12 @@ function MainController ($scope) {
    var cameraList = null;
 
    $scope.entityClick = function (page, item, entity) {
+	   //First check if a dynamic click function is defined, and if so executed and return.
+	   if(entityClickFunctions[item.type])
+       {
+            entityClickFunctions[item.type](item, entity);
+            return;
+       }
       switch (item.type) {
          case TYPES.SWITCH:
          case TYPES.LIGHT:

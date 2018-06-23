@@ -51,7 +51,16 @@ var FEATURES = {
    TURN_ON: 128,
    TURN_OFF: 256,
    STOP: 4096
-};
+};  
+
+//This is used to enable dynamic creation of click functions for tiles. 
+var entityClickFunctions = {};
+
+function entityClickAddFunction(_case, fn)
+{
+    entityClickFunctions[_case] = fn;
+}
+
 
 function mergeObjects (a, b) {
    return angular.merge(a, b);
