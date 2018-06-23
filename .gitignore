@@ -3,3 +3,5 @@
 /override_config.js
 .idea/*
 .idea
+.settings/*
+.settings
