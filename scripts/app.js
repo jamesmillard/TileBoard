@@ -23,6 +23,8 @@ var TYPES = {
    SENSOR: 'sensor',
    SENSOR_ICON: 'sensor_icon',
    SWITCH: 'switch',
+   LOCK: 'lock',
+   COVER: 'cover',
    GENERIC_ICON: 'generic_icon',
    INPUT_BOOLEAN: 'input_boolean',
    LIGHT: 'light',
@@ -38,6 +40,7 @@ var TYPES = {
    WEATHER: 'weather',
    CLIMATE: 'climate',
    MEDIA_PLAYER: 'media_player',
+   CUSTOM: 'custom'
 };
 
 var FEATURES = {

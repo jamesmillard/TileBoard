@@ -65,7 +65,7 @@
       </div>
    </div>
 
-   <div ng-if="item.type === TYPES.SCRIPT"
+   <div ng-if="item.type === TYPES.LOCK"
         class="item-entity-container">
 
       <div class="item-entity">
@@ -73,6 +73,42 @@
                ng-class="entityIcon(item, entity)"></span>
       </div>
    </div>
+
+   <div ng-if="item.type === TYPES.COVER"
+        class="item-entity-container">
+      <div class="item-cover">
+         <div class="item-cover--button -open"
+              ng-click="sendCover('open_cover', item, entity)">
+            <i class="mdi mdi-arrow-up"></i>
+         </div>
+         <div class="item-cover--button -stop"
+              ng-click="sendCover('stop_cover', item, entity)">
+            <i class="mdi mdi-stop"></i>
+         </div>
+         <div class="item-cover--button -close"
+              ng-click="sendCover('close_cover', item, entity)">
+            <i class="mdi mdi-arrow-down"></i>
+         </div>
+      </div>
+   </div>
+
+   <div ng-if="item.type === TYPES.CUSTOM"
+        class="item-entity-container">
+
+      <div class="item-entity">
+         <span class="item-entity--icon mdi"
+               ng-class="entityIcon(item, entity)"></span>
+      </div>
+   </div>
+
+   <div ng-if="item.type === TYPES.SCRIPT"
+                 class="item-entity-container">
+
+   <div class="item-entity">
+         <span class="item-entity--icon mdi"
+               ng-class="entityIcon(item, entity)"></span>
+   </div>
+</div>
 
    <div ng-if="item.type === TYPES.GENERIC_ICON"
         class="item-entity-container">
