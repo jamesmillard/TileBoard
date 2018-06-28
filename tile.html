@@ -92,12 +92,11 @@
       </div>
    </div>
 
-   <div ng-if="item.type === TYPES.CUSTOM"
-        class="item-entity-container">
+   <div ng-if="item.type === TYPES.CUSTOM" class="item-entity-container">
  			<div ng-if="item.innerHTML">
-           <div ng-include="item.innerHTML"/>
-  		 </div>
-
+          		 <div ng-include="item.innerHTML"></div>
+  			 </div>
+	
 
  			<div ng-if="!item.innerHTML">
    			   <div class="item-entity">
